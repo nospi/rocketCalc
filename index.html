@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rockets!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="/rockets.js"></script>
+</head>
+<body>
+    <!-- TOPNAV -->
+    <nav class="navbar navbar-dark bg-dark fg-light">
+        <div class="container">
+            <div class="navbar-brand">Rockets!</div>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Calculator</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <main class="container my-5">
+        <h1>Rockets again!</h1>
+        <p class="lead">How good are they?</p>
+        <hr>
+        <div class="row">
+            <div class="col-sm">
+                <form class="frm-calc" action="#" method="POST">        
+                    <div class="form-group">
+                        <label for="isp">Specific Impulse (seconds)</label>
+                        <input type="number" name="isp" id="isp" class="form-control" value=0 min=0>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exhaustVelocity">Effective Exhaust Velocity (m/s)</label>
+                        <input type="number" name="exhaustVelocity" id="exhaustVelocity" class="form-control" value="0" min="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fuelMass">Fuel Mass (kg)</label>
+                        <input type="number" name="fuelMass" id="fuelMass" class="form-control" value=0 min=0>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="wetMass">Wet Mass (kg)</label>
+                        <input type="number" name="wetMass" id="wetMass" class="form-control" value=0 min=0>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="dryMass">Dry Mass (kg)</label>
+                        <input type="number" name="dryMass" id="dryMass" class="form-control" value=0 min=0>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="massFlowRate">Mass Flow Rate (kg/s)</label>
+                        <input type="number" name="massFlowRate" id="massFlowRate" class="form-control" value="0" min="0">
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-body">
+                        <dl>    
+                            <dt>Mass Fraction</dt>
+                            <dd><span id="massFraction">0</span></dd>
+                            <dt>Delta-V</dt>
+                            <dd><span id="deltaV">0</span> m/s</dd>
+                            <dt>Effective Exhaust Velocity</dt>
+                            <dd><span id="eeV">0</span> m/s</dd>
+                            <dt>Thrust</dt>
+                            <dd><span id="thrust">0</span> kN</dd>
+                            <dt>Weight</dt>
+                            <dd><span id="weight">0</span> kN</dd>
+                            <dt>TWR</dt>
+                            <dd><span id="twr">N/A</span></dd>
+                            <dt>Burn Time</dt>
+                            <dd><span id="burnTime">0</span> seconds</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
